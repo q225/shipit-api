@@ -32,6 +32,33 @@ Students understand the gap between "it works on my machine" and "it works in pr
 
 **Answer:** Their code runs on servers in data centers around the world, not on someone's laptop!
 
+
+
+
+You are builing a project 
+
+Laptop -> Server 
+
+https://localhost:3000 
+https://192.0.0.2:3000
+
+
+localhost -> Chrome Browser -> 
+
+
+Code -> Folder -> npm run build/dist -> compress the file and make it into HLL -> Jar -> Deployened to any of the server with a given port 
+
+1.0.3354.32452345
+
+Buy a domain and attach our domain name to this server Ip 1.0.3354.32452345
+
+
+
+
+
+
+
+
 ### The Journey of Code (10 min)
 
 Draw this on the board:
@@ -95,6 +122,28 @@ Share these deployment facts:
 ---
 
 # Session 2: Environment Configuration
+
+
+
+3 Students all of them went to a hackathon
+
+1. good at frontend
+2. good at backend
+3. google at DB
+
+
+
+T-0 : EVERYTHING is working fine 
+t-10 : 1 pushed his changes 
+t-20 : 2 psuhed his changes 
+
+
+dev preprod prod performance 
+
+
+
+
+
 
 ## 🎯 Learning Objective
 Students understand why and how to manage different configurations for different environments.
@@ -223,6 +272,14 @@ const config = {
 
 ---
 
+
+
+Server -> Multiple pods -> Health of each pod
+
+ArgoCD 
+
+
+
 # Session 3: Health Checks & Monitoring
 
 ## 🎯 Learning Objective
@@ -261,7 +318,7 @@ Server crashes at 2:00 AM
 Health check fails at 2:01 AM
        │
        ▼
-Platform restarts server at 2:02 AM
+Platform restarts server at 2:02 AM ArgoCD
        │
        ▼
 Health check passes at 2:03 AM
@@ -861,3 +918,43 @@ By the end of this workshop, students should understand:
 ---
 
 **Happy Teaching! 🚀**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Base Config. {100 variablees }
+
+Dev env. {3 variables value } => 
+Prepod {7 variables value} => 
+
+
+
+
+Learn about 
+CDN 
+Locking in deployemnt piplelines
+Pods and server 
+Master - Slave Configurations
+
+
+
+
+
+
+
+
+
