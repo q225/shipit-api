@@ -137,4 +137,23 @@ router.get('/error', (req, res, next) => {
   next(error);
 });
 
+/**
+ * @route   GET /api/v1/health
+ * @desc    Health check endpoint
+ * @access  Public
+ */
+router.get('/health', (req, res) => {
+  res.json({ success: true, message: 'API is running' });
+});
+
+/**
+ * @route   GET /api/v1/health/detailed
+ * @desc    Detailed health check endpoint
+ * @access  Public
+ */
+router.get('/health/detailed', (req, res) => {
+  res.json({ success: true, message: 'API is running', version: config.api.version, environment: config.env });
+}); 
+
+
 module.exports = router;

@@ -125,4 +125,48 @@ function formatUptime(seconds) {
   return parts.join(' ');
 }
 
+/**
+ * @route   GET /health/live
+ * @desc    Liveness probe - is the process running?
+ * @access  Public
+ * 
+ * USAGE: Kubernetes liveness probe
+ * If this fails, the container will be restarted
+ */
+router.get('/live', (req, res) => {
+  res.status(200).json({
+    status: 'alive',
+    timestamp: new Date().toISOString()
+  });
+});
+
+
+/**
+ * @route   GET /health/ready
+ * @desc    Readiness probe - is the server ready to accept traffic?
+ * @access  Public
+ * 
+ * USAGE: Kubernetes readiness probe / Render health check
+ * Traffic is only routed when this returns 200
+ */
+router.get('/ready', (req, res) => {
+  // In a real app, you'd check:
+  // - Database connection
+  // - Redis connection
+  // - External service availability
+  
+  const isReady = true; // Simplified for workshop
+  
+  if (isReady) {
+    res.status(200).json({
+      status: 'ready',
+      timestamp: new Date().toISOString()
+    });
+  } else {
+    res.status(503).json({
+      status: 'not_ready',
+      timestamp: new Date().toISOString()
+    });
+  }
+});
 module.exports = router;
